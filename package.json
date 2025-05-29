@@ -4,9 +4,9 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo \"Building static files...\" && if not exist build mkdir build && copy index.html build\\",
+    "build": "echo \"Building static files...\" && mkdir -p build && cp index.html build/",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "npx gh-pages -d build",
     "start": "live-server --port=8080 --host=localhost --cors"
   },
   "keywords": [],

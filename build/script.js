@@ -94,80 +94,37 @@ form.addEventListener('submit', async (e) => {
   submitBtn.textContent = 'Sending...';
 
   try {
-    const sheetBestUrl = 'https://api.sheetbest.com/sheets/b2d6ae54-ba92-4b77-8e72-00bab938d36c';
-
-    const response = await fetch(sheetBestUrl, {
+    // Use MODE parameter to bypass CORS in development
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycby1JFmkeVLF3eicJSL7fmi8RHKEIjzcx_0UClPj1Ky_KWPnyg6rOumxmjcOmxJe_uwu/exec' + '?mode=cors';
+    
+    const response = await fetch(scriptUrl, {
       method: 'POST',
-      headers: { 
-        'Content-Type': 'application/json'
-      },
       body: JSON.stringify({
         name: form.name.value,
         email: form.email.value,
         phone: form.phone.value
       }),
+      headers: { 
+        'Content-Type': 'application/json'
+      },
+      mode: 'cors'
     });
 
     if (!response.ok) throw new Error('Network response was not ok');
-
-    alert('Submission successful!');
-    form.reset();
-
+    
+    const result = await response.json();
+    
+    if (result.success) {
+      alert('Submission successful!');
+      form.reset();
+    } else {
+      throw new Error(result.error || 'Unknown error');
+    }
   } catch (error) {
     console.error('Error:', error);
     alert('Error: ' + error.message);
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = originalText;
-  }
-});
-///////////////////////////////
-document.querySelector('.booking-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  
-  // Get checkbox values as comma-separated string
-  const cleanItems = Array.from(document.querySelectorAll('input[name="clean-item"]:checked'))
-    .map(checkbox => checkbox.value)
-    .join(', ');
-  
-  // Prepare form data
-  const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('country-code').value + document.getElementById('phone').value,
-    postcode: document.getElementById('postcode').value,
-    parking: document.querySelector('input[name="parking"]:checked')?.value,
-    floor: document.querySelector('input[name="floor"]:checked')?.value,
-    rooms: document.getElementById('rooms').value,
-    fabric: document.querySelector('input[name="fabric"]:checked')?.value,
-    photos: document.getElementById('photos').files.length > 0 ? 'Yes' : 'No',
-    staircase: document.querySelector('input[name="staircase"]:checked')?.value,
-    hallway: document.querySelector('input[name="hallway"]:checked')?.value,
-    spots: document.querySelector('input[name="spots"]:checked')?.value,
-    date: document.getElementById('date').value,
-    time_start: document.getElementById('time-start').value,
-    time_end: document.getElementById('time-end').value,
-    clean_items: cleanItems,
-    comments: document.getElementById('comments').value
-  };
-  
-  try {
-    const response = await fetch('https://api.sheetbest.com/sheets/ad78c122-5604-4825-857d-6a29d99dac37', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData)
-    });
-    
-    if (response.ok) {
-      alert('Booking submitted successfully! We will contact you shortly.');
-      this.reset();
-    } else {
-      throw new Error('Failed to submit booking');
-    }
-  } catch (error) {
-    console.error('Error:', error);
-    alert('There was an error submitting your booking. Please try again or contact us directly.');
   }
 });

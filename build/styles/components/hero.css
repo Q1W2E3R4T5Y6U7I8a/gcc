@@ -1,10 +1,7 @@
 .background_image {
-    background-size: contain;
+
     background-repeat: no-repeat;
     background-position: center;
-    width: 2500px;
-    height: 1000px;
-    
   }
   
 .hero-content {

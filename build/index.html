@@ -4,200 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Carpet Cleaning Services | London</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        /* Header styles */
-        .header {
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .navbar {
-            display: flex;
-            align-items: center;
-        }
-        
-        .navbar ul {
-            display: flex;
-            list-style: none;
-            margin-right: 30px;
-        }
-        
-        .navbar ul li {
-            margin: 0 10px;
-        }
-        
-        .navbar ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        
-        .navbar ul li a:hover {
-            color: #007bff;
-        }
-        
-        .social-icons {
-            display: flex;
-            align-items: center;
-        }
-        
-        .social-icons a {
-            margin-left: 10px;
-        }
-        
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-        }
-        
-        /* Info cards section */
-        .info-cards {
-            display: flex;
-            justify-content: space-between;
-            margin: 30px 0;
-        }
-        
-        .info-card {
-            width: 32%;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .info-card h3 {
-            margin-bottom: 15px;
-            color: #007bff;
-        }
-        
-        /* Video section */
-        .trust-videos {
-            padding: 30px 0;
-        }
-        
-        .trust-videos h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .video-container {
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .video-wrapper {
-            width: 48%;
-            position: relative;
-            padding-bottom: 27%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-        }
-        
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .info-cards {
-                flex-direction: column;
-            }
-            
-            .info-card {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-            
-            .video-container {
-                flex-direction: column;
-            }
-            
-            .video-wrapper {
-                width: 100%;
-                padding-bottom: 56.25%; /* 16:9 aspect ratio */
-                margin-bottom: 15px;
-            }
-            
-            .header .container {
-                flex-direction: column;
-            }
-            
-            
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/layout.css">
+    <link rel="stylesheet" href="./styles/typography.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/components/buttons.css">
+    <link rel="stylesheet" href="./styles/components/cards.css">
+    <link rel="stylesheet" href="./styles/components/footer.css">
+    <link rel="stylesheet" href="./styles/components/forms.css">
+    <link rel="stylesheet" href="./styles/components/header.css">
+    <link rel="stylesheet" href="./styles/components/hero.css">
+    <link rel="stylesheet" href="./styles/components/media-queries.css">
+    <link rel="stylesheet" href="./styles/components/navbar.css">
+    <link rel="stylesheet" href="./styles/components/testimonials.css">    
+    <link rel="stylesheet" href="./styles/components/videos.css"> 
+
+    <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- HEADER -->
-    <header class="header sticky">
+    <header class="header">
         <div class="container">
-            <h1>Go Clean Carpet</h1>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#booking">BOOKING</a></li>
-                    <li><a href="#contacts">CONTACTS</a></li>
-                    <li><a href="#payment">PAYMENT</a></li>
-                    <li><a href="#price">PRICE</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://www.youtube.com"><img src="assets/youtube_icon.png" alt="YouTube"></a>
-                    <a href="https://www.facebook.com"><img src="assets/fb_icon.jfif" alt="Facebook"></a>
-                    <a href="https://www.instagram.com"><img src="assets/instagram_icon.webp" alt="Instagram"></a>
-                </div>
-            </nav>
+          <nav class="navbar">
+            <img src="./assets/emblem_go_cc" alt="Go Carpet Clean" class="logo">
+            
+            <div class="menu-toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            
+            <ul class="nav-menu">
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#booking">BOOKING</a></li>
+              <li><a href="#contacts">CONTACTS</a></li>
+              <li><a href="#payment">PAYMENT</a></li>
+              <li><a href="#price">PRICE</a></li>
+            </ul>
+            
+            <div class="social-icons">
+              <a href="https://www.youtube.com"><img src="assets/youtube_icon.png"></a>
+              <a href="https://www.facebook.com"><img src="assets/facebook_logo.png" alt="Facebook"></a>
+              <a href="http://www.tiktok.com/@gocarpetcleanuk"><img src="assets/tik_tok_icon.webp" alt="Tik-tok"></a>
+              <a href="https://www.instagram.com/gocarpetclean_uk?igsh=aTZ5dWJzMXE1cGd4&utm_source=qr"><img src="assets/instagram_icon.webp" alt="Instagram"></a>
+              <a href="https://wa.me/447833517953" target="_blank">
+                <img src="assets/wa_icon.png" alt="WhatsApp">
+              </a>
+            </div>
+          </nav>
         </div>
-    </header>
+      </header>
 
     <main>
-        <section class="hero-section" style="background-image: url('/assets/Go_Clean_Carpet_bc.jpg');">
+        <section class="hero-section background_image" style="background-image: url('/assets/Go_Clean_Carpet_bc.jpg');">
             <div class="container">
                 <div class="hero-content">
                     <div class="contact-box">
-                        <form class="contact-form">
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Your email" required>
-                            <input type="tel" placeholder="+44" required>
-                            <input type="tel" placeholder="99-9999-99999" required>
+                        <form id="contact-form" class="contact-form">
+                            <input type="text" name="name" placeholder="Your Name" required>  <!-- Added name -->
+                            <input type="email" name="email" placeholder="Your email" required> 
+                            <input type="tel" name="phone" placeholder="Your number" required>  <!-- Added name -->
                             <button type="submit">SUBMIT</button>
-                        </form>
+                          </form>
                         <div class="stats">
-                            <p>Over <strong>4,320</strong> happy customers.</p>
+                            <p>Over <strong>570</strong> happy customers.</p>
                             <button>TAKE TEST AND FIND OUT THE PRICE</button>
                             <p class="highlight">+ Get guaranteed gift</p>
                         </div>
@@ -423,7 +293,6 @@
                     <div class="form-group">
                         <label for="phone">Phone</label>
                         <div class="phone-input">
-                            <input type="text" id="country-code" value="+44" readonly>
                             <input type="tel" id="phone" placeholder="99-9999-99999" required>
                         </div>
                     </div>
@@ -531,7 +400,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3></h3>
-                    <h3>ТВОЯ ЕМБЛЕМА</h3>
+                    <img src="/assets/emblem_go_cc" alt="">
                     
                 </div>
                 

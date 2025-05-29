@@ -7,7 +7,7 @@
 body {
     line-height: 1.6;
     color: var(--text-color);
-    background-color: #1691D9;
+    background-color: var(--accent-color);
 }
 
 .container {
