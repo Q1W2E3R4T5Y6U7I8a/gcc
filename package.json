@@ -4,7 +4,7 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo \"Building static files...\" && mkdir -p build && cp index.html build/",
+"build": "echo \"Building static files...\" && mkdir -p build && cp index.html build/ && cp -r styles script.js assets build/",
     "predeploy": "npm run build",
     "deploy": "npx gh-pages -d build",
     "start": "live-server --port=8080 --host=localhost --cors"
