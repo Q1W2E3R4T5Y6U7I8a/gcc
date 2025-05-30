@@ -1,52 +1,313 @@
-.booking-form {
+:root {
+    --primary-color: #1691D9;
+    --primary-dark: #0d6ba8;
+    --accent-color: #FFD700;
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-gray: #495057;
+    --text-color: #212529;
+    --error-color: #FFD700;
+    --success-color: #2a9d8f;
+    --border-radius: 12px;
+    --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  /* Base Form Styles */
+  .booking-form {
     max-width: 800px;
-    margin: 0 auto;
-    background-color: var(--light-gray);
-    padding: 2rem;
-    border-radius: 5px;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-.phone-input {
-    display: flex;
-}
-
-.phone-input input:first-child {
-    width: 60px;
-    margin-right: 10px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .booking-form h2 {
+    color: var(--primary-color);
     text-align: center;
-}
-
-.radio-group {
-    display: flex;
-    gap: 1rem;
-}
-
-.radio-group.vertical {
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.datetime-input {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  /* Form Groups */
+  .form-group {
+    margin-bottom: 1.8rem;
+    position: relative;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: var(--dark-gray);
+    font-size: 1rem;
+  }
+  
+  .form-group .note {
+    font-size: 0.85rem;
+    color: var(--dark-gray);
+    margin-bottom: 0.8rem;
+    font-style: italic;
+  }
+  
+  /* Input Fields */
+  .booking-form input[type="text"],
+  .booking-form input[type="email"],
+  .booking-form input[type="tel"],
+  .booking-form input[type="number"],
+  .booking-form input[type="date"],
+  .booking-form input[type="time"],
+  .booking-form textarea,
+  .booking-form select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: var(--transition);
+    background-color: var(--light-gray);
+  }
+  
+  .booking-form input:focus,
+  .booking-form textarea:focus,
+  .booking-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(22, 145, 217, 0.2);
+    background-color: white;
+  }
+  
+  /* Phone Input */
+  .phone-input {
     display: flex;
     align-items: center;
+  }
+  
+  .phone-input input:first-child {
+    width: 50%;
+    margin-right: 1rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  
+  /* Radio & Checkbox Groups */
+  .radio-group,
+  /* Updated Checkbox Styles */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 2rem;
+    min-height: 1.5rem;
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Custom checkbox */
+  .checkbox-group label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: var(--light-gray);
+    border: 2px solid var(--medium-gray);
+    border-radius: 4px;
+    transition: var(--transition);
+  }
+  
+  /* Checkmark (hidden by default) */
+  .checkbox-group label::after {
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    top: 0.55rem;
+    width: 0.4rem;
+    height: 0.8rem;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: var(--transition);
+  }
+  
+  /* Show checkmark when checked */
+  .checkbox-group input[type="checkbox"]:checked + label::before {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  .checkbox-group input[type="checkbox"]:checked + label::after {
+    opacity: 1;
+  }
+  
+  /* Focus styles */
+  .checkbox-group input[type="checkbox"]:focus + label::before {
+    box-shadow: 0 0 0 3px rgba(22, 145, 217, 0.3);
+  }
+  
+  /* Custom Radio Buttons */
+  .radio-group input[type="radio"] + span {
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: var(--light-gray);
+    border: 2px solid var(--medium-gray);
+    border-radius: 50%;
+    transition: var(--transition);
+  }
+  
+  .radio-group input[type="radio"]:checked + span {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: inset 0 0 0 3px white;
+  }
+  
+  .radio-group input[type="radio"]:focus + span {
+    box-shadow: 0 0 0 3px rgba(22, 145, 217, 0.3);
+  }
+  
+  /* Custom Checkboxes */
+  .checkbox-group input[type="checkbox"] + span {
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: var(--light-gray);
+    border: 2px solid var(--medium-gray);
+    border-radius: 4px;
+    transition: var(--transition);
+  }
+  
+  .checkbox-group input[type="checkbox"]:checked + span {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+  }
+  
+  .checkbox-group input[type="checkbox"]:focus + span {
+    box-shadow: 0 0 0 3px rgba(22, 145, 217, 0.3);
+  }
+  
+  /* Date & Time Inputs */
+  .datetime-input {
+    display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
-}
-
-.form-note {
+    align-items: center;
+  }
+  
+  .datetime-input input {
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .datetime-input span {
+    color: var(--dark-gray);
+    font-weight: 500;
+  }
+  
+  /* Form Note */
+  .form-note {
     font-size: 0.9rem;
     color: var(--dark-gray);
-    margin: 1.5rem 0;
-    padding: 0.5rem;
+    margin: 2rem 0;
+    padding: 1rem;
     background-color: rgba(255, 215, 0, 0.1);
-    border-left: 3px solid var(--primary-color);
-}
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  }
+  
+  /* Submit Button */
+  .booking-form .btn {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .booking-form .btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(22, 145, 217, 0.3);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .booking-form {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+    
+    .datetime-input {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+    
+    .datetime-input input {
+      width: 100%;
+    }
+    
+    .phone-input {
+      flex-direction: column;
+    }
+    
+    .phone-input input:first-child {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 0.8rem;
+    }
+  }
+  
+  /* Validation Styles */
+  .booking-form input:required:invalid,
+  .booking-form textarea:required:invalid {
+    border-color: var(--error-color);
+  }
+  
+  .booking-form input:required:valid,
+  .booking-form textarea:required:valid {
+    border-color: var(--success-color);
+  }
+  
+  /* Focus States */
+  .booking-form input:focus:required:invalid,
+  .booking-form textarea:focus:required:invalid {
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
+  }
+  
+  .booking-form input:focus:required:valid,
+  .booking-form textarea:focus:required:valid {
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
+  }

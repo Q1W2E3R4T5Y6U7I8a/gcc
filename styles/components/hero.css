@@ -1,13 +1,24 @@
-.background_image {
-    background-size: contain;
+.hero-section {
+    background-image: url('./assets/Go_Clean_Carpet_bc.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 2000px
-  }
-  
-.hero-content {
-    justify-content: center;
+    display: flex;
     align-items: center;
+}
+
+.care-info-section {
+    padding-top: 50px;
+}
+
+.mobile-hero-image {
+    display: none; /* Hidden by default (desktop) */
+}
+
+.hero-content {
+    display: flex;
+    justify-content: flex-end; /* Align form to right on desktop */
+    padding: 2rem;
 }
 
 .contact-box {
@@ -17,12 +28,38 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     max-width: 400px;
     padding: 2rem;
     text-align: center;
 }
 
+/* Mobile styles */
+@media (max-width: 768px) {
+    .hero-section {
+        background-image: none; /* Remove background image on mobile */
+        min-height: auto;
+        display: block;
+    }
+    
+    .mobile-hero-image {
+        display: block; /* Show mobile image */
+        width: 100%;
+        height: auto;
+    }
+    
+    .hero-content {
+        justify-content: center; /* Center form on mobile */
+        padding: 1rem;
+    }
+    
+    .contact-box {
+        margin: 0 auto; /* Center the form box */
+        margin-top: 1rem; /* Add space between image and form */
+    }
+}
+
+/* Form styles (same for both) */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -56,23 +93,4 @@
     font-weight: bold;
     color: var(--primary-yellow);
     transition: color 0.3s ease;
-}
-
-.info-cards {
-    display: flex;
-    justify-content: space-between;
-    margin: 30px 0;
-}
-
-.info-card {
-    width: 32%;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.info-card h3 {
-    margin-bottom: 15px;
-    color: #007bff;
 }
