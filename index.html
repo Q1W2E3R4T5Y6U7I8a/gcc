@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./styles/components/navbar.css">
     <link rel="stylesheet" href="./styles/components/testimonials.css">    
     <link rel="stylesheet" href="./styles/components/videos.css"> 
+    <link rel="stylesheet" href="./styles/components/random_fixes.css"> 
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
@@ -39,7 +40,8 @@
             <ul class="nav-menu">
               <li><a href="#about">ABOUT</a></li>
               <li><a href="#booking">BOOKING</a></li>
-              <li><a href="https://wa.me/447833517953">CONTACT</a></li>
+              <li><a href="#team">TEAM</a></li>
+
               <li><a href="#price">PRICE</a></li>
             </ul>
             
@@ -70,7 +72,9 @@
                         </form>
                         <div class="stats">
                             <p>Over <strong>570</strong> happy customers.</p>
-                            <button>TAKE TEST AND FIND OUT THE PRICE</button>
+                            <button>
+                                <a href="#booking" style="all: unset; cursor: pointer;">TAKE TEST AND FIND OUT THE PRICE</a>
+                            </button>
                             <p class="highlight">+ Get guaranteed gift</p>
                         </div>
                     </div>
@@ -147,26 +151,26 @@
                     <h2>Cleaning Process</h2>
                     <div class="process-steps">
                         <div class="step">
-                            <div class="step-number">1</div>
+
                             <h3>YOU BOOK</h3>
-                            <p>Book online or by phone on 07878685777</p>
+                            <p>Book online or by phone on +44 7833 517953</p>
                         </div>
                         <div class="step">
-                            <div class="step-number">2</div>
+
                             <h3>WE CLEAN</h3>
                             <p>A professional carpet cleaner will arrive on time, survey and deep clean your carpets</p>
                         </div>
                         <div class="step">
-                            <div class="step-number">3</div>
+
                             <h3>YOU ENJOY</h3>
                             <p>Clean, nice and fresh carpets for you to enjoy!</p>
                         </div>
                     </div>
-                    <button class="btn">BOOK NOW</button>
+                    <button class="btn">   </button>
                 </div>
                 
                 <div class="trust-section">
-                    <h2>Why trust us?</h2>
+
                     <div class="trust-reasons">
                         <div class="reason">
                             <h3>Quality</h3>
@@ -186,29 +190,29 @@
                 <div class="team-section">
                     <h2>Our Team</h2>
                     <div class="team-members">
-                        <div class="member">
+                        <div class="member" id="team">
                             <div class="member-photo">
-                                <img src="assets/bodia.jpg" alt="Tetiana Popovych" loading="lazy">
+                                <img src="assets/zahar_icon" alt="Zahar Karashevskyi" loading="lazy">
                             </div>
-                            <h3>Tetiana Popovych</h3>
+                            <h3>Zahar Karashevskyi</h3>
                             <p class="position">Director</p>
-                            <p>Tetiana is the voice of our brand. She spends hours to make our clients feel care and enjoy communication with the company. If you have any suggestions or ideas you can write her.</p>
+                            <p>Zahar invented our company. He is the father of our main goals and values. He has founded first core members of our team and helped them to show their unique talents in work process.</p>
                         </div>
                         <div class="member">
                             <div class="member-photo">
-                                <img src="assets/bodia.jpg" alt="Kate Bushe" loading="lazy">
+                                <img src="assets/maks_icon" alt="Maksym Karashevskyi" loading="lazy">
                             </div>
-                            <h3>Kate Bushe</h3>
+                            <h3>Maksym Karashevskyi</h3>
                             <p class="position">Manager</p>
-                            <p>Kate takes care of everything you can see. She spent five years in London learning visual communication. She uses her knowledge to make the world a little more beautiful.</p>
+                            <p>Maks is the voice of our brand. He spends hours to make our clients feel care and enjoy communication with the company. If you have any suggestions or ideas you can write him.</p>
                         </div>
                         <div class="member">
                             <div class="member-photo">
-                                <img src="assets/bodia.jpg" alt="Marsell Filyo" loading="lazy">
+                                <img src="assets/bodia_icon" alt="Kate Bushe" loading="lazy">
                             </div>
-                            <h3>Marsell Filyo</h3>
+                            <h3>Bogdan Karashevskyi</h3>
                             <p class="position">Carpet cleaning</p>
-                            <p>Marcell invented our company. He is the father of our main goals and values. He has founded first core members of our team and helped them to show their unique talents in work process.</p>
+                            <p>Bogdan brings energy and precision to every cleaning task. His dedication ensures spotless results and happy clients. With a keen eye for detail, he treats every carpet like his own.</p>
                         </div>
                     </div>
                 </div>
@@ -216,7 +220,7 @@
                 <section id="areas" class="section">
                     <div class="container">
                         <h2>Areas We Cover in London</h2>
-                        
+                        <img src="assets/areas_covered" alt="">
                     </div>
                 </section>
                 
@@ -225,7 +229,7 @@
                     <div class="testimonial-cards">
                         <div class="testimonial">
                             <div class="client-photo">
-                                <img src="assets/bodia.jpg" alt="Farrel Gulierm" loading="lazy">
+                                <img src="assets/comment_2" alt="Farrel Gulierm" loading="lazy">
                             </div>
                             <div class="testimonial-content">
                                 <p>"Very friendly and professional a fantastic job tidying up after previous poor attempts in cleaning, very timely and even did the arm on the sofa for free, not that I would encourage that I'm just cheeky."</p>
@@ -234,7 +238,7 @@
                         </div>
                         <div class="testimonial">
                             <div class="client-photo">
-                                <img src="assets/bodia.jpg" alt="Samuel Willson" loading="lazy">
+                                <img src="assets/comment_4" alt="Samuel Willson" loading="lazy">
                             </div>
                             <div class="testimonial-content">
                                 <p>"A fantastic, professional and reliable company. Great value for money and will be using this company again. My living room carpet was a mess and now looks like new."</p>
@@ -243,7 +247,7 @@
                         </div>
                         <div class="testimonial">
                             <div class="client-photo">
-                                <img src="assets/bodia.jpg" alt="Sarah Lewin" loading="lazy">
+                                <img src="assets/comment_1" alt="Sarah Lewin" loading="lazy">
                             </div>
                             <div class="testimonial-content">
                                 <p>"Fabulous 5 star professional service : Friendly, polite and extremely thorough. Job well done! The sofas he cleaned came up like new!"</p>
@@ -252,11 +256,11 @@
                         </div>
                         <div class="testimonial">
                             <div class="client-photo">
-                                <img src="assets/bodia.jpg" alt="Alex Larkins" loading="lazy">
+                                <img src="assets/comment_3" alt="Lara Smoke" loading="lazy">
                             </div>
                             <div class="testimonial-content">
-                                <p>"Excellent service, had sofa 2 chairs and carpet cleaned, nice clean and fresh thank you LionYellow ltd."</p>
-                                <p class="author">Alex Larkins <span>Facebook</span></p>
+                                <p>"Excellent service, had sofa 2 chairs and carpet cleaned, nice clean and fresh thank you Clean Carpet."</p>
+                                <p class="author">Lara Smoke" <span>Facebook</span></p>
                             </div>
                         </div>
                     </div>

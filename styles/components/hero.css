@@ -37,7 +37,7 @@
 /* Mobile styles */
 @media (max-width: 768px) {
     .hero-section {
-        background-image: none; /* Remove background image on mobile */
+        background-image: none !important;/* Remove background image on mobile */
         min-height: auto;
         display: block;
     }
