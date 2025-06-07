@@ -14,19 +14,9 @@ h2 {
     text-align: center;
 }
 
-h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background-color: var(--primary-color);
-}
 
 .subtitle {
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--dark-gray);
+    color: #333;
 }

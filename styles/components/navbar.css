@@ -120,6 +120,22 @@
   }
   
   @media (max-width: 768px) {
+
+    .social-icons {
+
+      padding-left: 100px;
+    }
+
+    .social-icons a {
+      width: 25px;
+      height: 25px;
+    }
+  
+    .social-icons img {
+      width: 19px;
+      height: 19px;
+    }
+
     .menu-toggle {
       display: block;
     }
@@ -145,10 +161,7 @@
 
     }
     
-    .social-icons {
-      display: none;
-    }
-    
+
     .menu-toggle.active .bar:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
     }

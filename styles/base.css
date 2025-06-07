@@ -23,5 +23,6 @@ img {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 122px;
   }
   

@@ -467,3 +467,56 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+
+///////////////////////
+///////////////////////
+///////////////////////////
+//BEFORE - AFTER
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.comparison-box').forEach(box => {
+    const divider = box.querySelector('.divider');
+    const after = box.querySelector('.after');
+    let isDragging = false;
+
+    const updatePosition = (clientX) => {
+      const boxRect = box.getBoundingClientRect();
+      let x = clientX - boxRect.left;
+      x = Math.max(0, Math.min(x, boxRect.width));
+
+      const percentage = (x / boxRect.width) * 100;
+      after.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+      divider.style.left = `${percentage}%`;
+    };
+
+    divider.addEventListener('mousedown', e => {
+      isDragging = true;
+      document.body.style.cursor = 'ew-resize';
+      e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', e => {
+      if (isDragging) updatePosition(e.clientX);
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+      document.body.style.cursor = '';
+    });
+
+    // Touch support
+    divider.addEventListener('touchstart', e => {
+      isDragging = true;
+      e.preventDefault();
+    });
+
+    document.addEventListener('touchmove', e => {
+      if (isDragging) updatePosition(e.touches[0].clientX);
+    });
+
+    document.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+  });
+});

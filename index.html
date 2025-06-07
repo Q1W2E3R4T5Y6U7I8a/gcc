@@ -19,13 +19,17 @@
     <link rel="stylesheet" href="./styles/components/navbar.css">
     <link rel="stylesheet" href="./styles/components/testimonials.css">    
     <link rel="stylesheet" href="./styles/components/videos.css"> 
+    <link rel="stylesheet" href="./styles/components/before-after.css"> 
     <link rel="stylesheet" href="./styles/components/random_fixes.css"> 
+    <link rel="stylesheet" href="./styles/components/team-section.css"> 
+    <link rel="stylesheet" href="./styles/components/cleaning-process.css"> 
+    <link rel="stylesheet" href="./styles/components/areas.css"> 
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- HEADER -->
+
     <header class="header">
         <div class="container">
           <nav class="navbar">
@@ -56,8 +60,7 @@
         </div>
       </header>
 
-    <main>
-        
+    <main> 
         <section class="hero-section background_image" style="background-image: url('./assets/Go_Clean_Carpet_bc.jpg');">
             <img src="./assets/Go_Clean_Carpet_bc_mobile.jpg" class="mobile-hero-image" alt="Carpet Cleaning">
             
@@ -82,31 +85,12 @@
             </div>
         </section>
 
-        <section class="care-info-section" id="about">
-                <h2>About our approach</h2>
-                    <p class="subtitle">We will make your home clean in no time!</p>
-            <div class="container">
-                <div class="info-cards">
-                    <div class="info-card">
-                        <h3>CARE</h3>
-                        <p>Carpets and fitted carpet are recommended to be cleaned once every six months. And if there are children and pets in your house - every 2-3 months.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>INSECTS</h3>
-                        <p>With prolonged use of carpets and area rugs without deep cleaning, there is a possibility that dust mites can hang there, contact of which with the skin of children or animals is highly undesirable.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>SERVICE LIFE</h3>
-                        <p>With self-cleaning, there is no guarantee that the mites completely disappear. Deep carpet cleaning services will help in this.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="section active">
+        <section class="section active">
             <div class="container">
                 <div class="pricing-section" id="price">
-                    <h2>Limited Time Special Offer</h2>
+                    <div style="background-color: red; padding: 20px 0; text-align: center; border-radius: 12px;">
+                        <h2 style="margin: 0; color: white;">Limited Time Special Offer</h2>
+                      </div>              
                     <p class="subtitle">Choose your best offer today.</p>
                     
                     <div class="pricing-grid">
@@ -147,120 +131,281 @@
                     </div>
                 </div>
                 
-                <div class="process-section">
-                    <h2>Cleaning Process</h2>
-                    <div class="process-steps">
-                        <div class="step">
-
-                            <h3>YOU BOOK</h3>
-                            <p>Book online or by phone on +44 7833 517953</p>
-                        </div>
-                        <div class="step">
-
-                            <h3>WE CLEAN</h3>
-                            <p>A professional carpet cleaner will arrive on time, survey and deep clean your carpets</p>
-                        </div>
-                        <div class="step">
-
-                            <h3>YOU ENJOY</h3>
-                            <p>Clean, nice and fresh carpets for you to enjoy!</p>
-                        </div>
-                    </div>
-                    <button class="btn">   </button>
-                </div>
-                
-                <div class="trust-section">
-
-                    <div class="trust-reasons">
-                        <div class="reason">
-                            <h3>Quality</h3>
-                            <p>We use only high-quality and biodegradable chemicals from the best world brands Chemspec (USA) and Prochem (UK). Cleaning products are safe for people and animals, and also do not have an unpleasant smell.</p>
-                        </div>
-                        <div class="reason">
-                            <h3>Support</h3>
-                            <p>We are in touch 24 hours a day, on any day of the week. A polite manager will advise you on the price of the service, length of service, and also book you for the most convenient time for you.</p>
-                        </div>
-                        <div class="reason">
-                            <h3>Experience</h3>
-                            <p>We work in the field of cleaning for more than 2 years. Our specialists have been trained at Prochem, a leading London-based cleaning products company. On our account more than 1500 cleaned carpets.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-section">
-                    <h2>Our Team</h2>
-                    <div class="team-members">
-                        <div class="member" id="team">
-                            <div class="member-photo">
-                                <img src="assets/zahar_icon" alt="Zahar Karashevskyi" loading="lazy">
+                <section class="cleaning-process-section" id="about">
+                    <div class="process-container">
+                        <h2 class="section-title">Our Cleaning Process</h2>
+                        <p class="section-subtitle">Simple steps to fresh, clean carpets</p>
+                        
+                        <div class="process-map">
+                            <!-- Step 1 -->
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h3>YOU BOOK</h3>
+                                    <p>Book online or by phone on +44 7833 517953</p>
+                                </div>
+                                <div class="step-connector"></div>
                             </div>
-                            <h3>Zahar Karashevskyi</h3>
-                            <p class="position">Director</p>
-                            <p>Zahar invented our company. He is the father of our main goals and values. He has founded first core members of our team and helped them to show their unique talents in work process.</p>
-                        </div>
-                        <div class="member">
-                            <div class="member-photo">
-                                <img src="assets/maks_icon" alt="Maksym Karashevskyi" loading="lazy">
+                            
+                            <!-- Step 2 -->
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h3>WE CLEAN</h3>
+                                    <p>A professional carpet cleaner will arrive on time, survey and deep clean your carpets</p>
+                                </div>
+                                <div class="step-connector"></div>
                             </div>
-                            <h3>Maksym Karashevskyi</h3>
-                            <p class="position">Manager</p>
-                            <p>Maks is the voice of our brand. He spends hours to make our clients feel care and enjoy communication with the company. If you have any suggestions or ideas you can write him.</p>
-                        </div>
-                        <div class="member">
-                            <div class="member-photo">
-                                <img src="assets/bodia_icon" alt="Kate Bushe" loading="lazy">
+                            
+                            <!-- Step 3 -->
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h3>YOU ENJOY</h3>
+                                    <p>Clean, nice and fresh carpets for you to enjoy!</p>
+                                </div>
                             </div>
-                            <h3>Bogdan Karashevskyi</h3>
-                            <p class="position">Carpet cleaning</p>
-                            <p>Bogdan brings energy and precision to every cleaning task. His dedication ensures spotless results and happy clients. With a keen eye for detail, he treats every carpet like his own.</p>
                         </div>
+                        
+                        <button class="cta-button"> <a href="#booking" style="text-decoration: none; color: inherit;">
+                            Book Your Cleaning Now
+                          </a></button>
                     </div>
-                </div>
-
-                <section id="areas" class="section">
-                    <div class="container">
-                        <h2>Areas We Cover in London</h2>
-                        <img src="assets/areas_covered" alt="">
+                    
+                    <div class="trust-container">
+                        <h2 class="trust-title">Why Trust Us?</h2>
+                        
+                        <div class="trust-grid">
+                            <!-- Reason 1 -->
+                            <div class="trust-card">
+                                <div class="trust-icon" style="background-color: var(--warning-color);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--primary-yellow)" width="36" height="36">
+                                        <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm-1.06 13.54L7.4 12l1.41-1.41 2.12 2.12 4.24-4.24 1.41 1.41-5.64 5.66z"/>
+                                    </svg>
+                                </div>
+                                <h3>Quality</h3>
+                                <p>We use only high-quality and biodegradable chemicals from the best world brands Chemspec (USA) and Prochem (UK). Cleaning products are safe for people and animals, and also do not have an unpleasant smell.</p>
+                            </div>
+                            
+                            <!-- Reason 2 -->
+                            <div class="trust-card">
+                                <div class="trust-icon" style="background-color: var(--light-gray);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--primary-color)" width="36" height="36">
+                                        <path d="M12 3c-4.97 0-9 3.185-9 7.115 0 2.557 1.522 4.82 3.889 6.115l-.78 2.77 3.116-1.65c.88.275 1.823.425 2.775.425 4.97 0 9-3.186 9-7.115C21 6.186 16.97 3 12 3z"/>
+                                    </svg>
+                                </div>
+                                <h3>Support</h3>
+                                <p>We are in touch 24 hours a day, on any day of the week. A polite manager will advise you on the price of the service, length of service, and also book you for the most convenient time for you.</p>
+                            </div>
+                            
+                            <!-- Reason 3 -->
+                            <div class="trust-card">
+                                <div class="trust-icon" style="background-color: var(--light-gray);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--primary-color)" width="36" height="36">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </div>
+                                <h3>Experience</h3>
+                                <p>We work in the field of cleaning for more than 2 years. Our specialists have been trained at Prochem, a leading London-based cleaning products company. On our account more than 1500 cleaned carpets.</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 
-                <div class="testimonials">
-                    <h2>What Our Clients Say</h2>
-                    <div class="testimonial-cards">
-                        <div class="testimonial">
-                            <div class="client-photo">
-                                <img src="assets/comment_2" alt="Farrel Gulierm" loading="lazy">
+                <div class="before-after-section">
+                    <h2>Our Work Results</h2>
+                    <div class="comparison-grid">
+                        <!-- Comparison 1 -->
+                        <div class="comparison-box">
+                            <div class="before">
+                                <img src="/assets/before_1" alt="Before cleaning 1">
                             </div>
-                            <div class="testimonial-content">
-                                <p>"Very friendly and professional a fantastic job tidying up after previous poor attempts in cleaning, very timely and even did the arm on the sofa for free, not that I would encourage that I'm just cheeky."</p>
-                                <p class="author">Farrel Gulierm <span>Facebook</span></p>
+                            <div class="after">
+                                <img src="/assets/after_1" alt="After cleaning 1">
+                            </div>
+                            <div class="divider" draggable="true"></div>
+                        </div>
+                        
+                        <!-- Comparison 2 -->
+                        <div class="comparison-box">
+                            <div class="before">
+                                <img src="/assets/before_2" alt="Before cleaning 2">
+                            </div>
+                            <div class="after">
+                                <img src="/assets/after_2" alt="After cleaning 2">
+                            </div>
+                            <div class="divider" draggable="true"></div>
+                        </div>
+                        
+                        <!-- Comparison 3 -->
+                        <div class="comparison-box">
+                            <div class="before">
+                                <img src="/assets/before_3" alt="Before cleaning 3">
+                            </div>
+                            <div class="after">
+                                <img src="/assets/after_3" alt="After cleaning 3">
+                            </div>
+                            <div class="divider" draggable="true"></div>
+                        </div>
+                    </div>
+                </div>  
+                
+                <section class="care-info-section">
+                    <h2>About our approach</h2>
+                        <p class="subtitle">We will make your home clean in no time!</p>
+                <div class="container">
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <h3>CARE</h3>
+                            <p>Carpets and fitted carpet are recommended to be cleaned once every six months. And if there are children and pets in your house - every 2-3 months.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>INSECTS</h3>
+                            <p>With prolonged use of carpets and area rugs without deep cleaning, there is a possibility that dust mites can hang there, contact of which with the skin of children or animals is highly undesirable.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>SERVICE LIFE</h3>
+                            <p>With self-cleaning, there is no guarantee that the mites completely disappear. Deep carpet cleaning services will help in this.</p>
+                        </div>
+                    </div>
+                </div>
+                </section>
+
+                <div class="team-section" id="team">
+                    <div class="team-container">
+                        <h2 class="team-heading">Our Dream Team</h2>
+                        <p class="team-subheading">Meet the passionate professionals behind our exceptional service</p>
+                        
+                        <div class="team-members">
+                            <!-- Member 1 -->
+                            <div class="team-member">
+                                <div class="member-card">
+                                    <div class="member-photo-container">
+                                        <div class="member-photo">
+                                            <img src="assets/zahar_icon" alt="Zahar Karashevskyi" loading="lazy">
+                                            <div class="photo-overlay"></div>
+                                        </div>
+                                    </div>
+                                    <div class="member-info">
+                                        <h3 class="member-name">Zahar Karashevskyi</h3>
+                                        <p class="member-position">Director</p>
+                                        <div class="member-divider"></div>
+                                        <p class="member-bio">Zahar founded our company and established our core values. He assembled our talented team and fosters an environment where each member can excel.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Member 2 -->
+                            <div class="team-member">
+                                <div class="member-card">
+                                    <div class="member-photo-container">
+                                        <div class="member-photo">
+                                            <img src="assets/maks_icon" alt="Maksym Karashevskyi" loading="lazy">
+                                            <div class="photo-overlay"></div>
+                                        </div>
+                                    </div>
+                                    <div class="member-info">
+                                        <h3 class="member-name">Maksym Karashevskyi</h3>
+                                        <p class="member-position">Manager</p>
+                                        <div class="member-divider"></div>
+                                        <p class="member-bio">Maks is the voice of our brand, ensuring every client feels valued. He's your go-to person for suggestions, feedback, or just a friendly chat about our services.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Member 3 -->
+                            <div class="team-member">
+                                <div class="member-card">
+                                    <div class="member-photo-container">
+                                        <div class="member-photo">
+                                            <img src="assets/bodia_icon" alt="Bogdan Karashevskyi" loading="lazy">
+                                            <div class="photo-overlay"></div>
+                                        </div>
+                                    </div>
+                                    <div class="member-info">
+                                        <h3 class="member-name">Bogdan Karashevskyi</h3>
+                                        <p class="member-position">Carpet Cleaning Specialist</p>
+                                        <div class="member-divider"></div>
+                                        <p class="member-bio">Bogdan brings unmatched energy and precision to every cleaning task. His meticulous approach guarantees spotless results that exceed expectations.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="testimonial">
-                            <div class="client-photo">
-                                <img src="assets/comment_4" alt="Samuel Willson" loading="lazy">
+                    </div>
+                </div>
+
+                <section id="areas" class="section areas-covered">
+                    <div class="container">
+                      <h2>We Cover the Oxfordshire and Berkshire Areas</h2>
+                      <img src="assets/areas_covered" alt="Areas Covered Map" class="areas-img" />
+                    </div>
+                </section>
+                  
+                
+                <div class="testimonials-section">
+                    <div class="testimonials-container">
+                        <h2 class="testimonials-heading">What Our Clients Say</h2>
+                        <div class="testimonial-cards">
+                            <!-- Testimonial 1 -->
+                            <div class="testimonial-card">
+                                <div class="testimonial-card-inner">
+                                    <div class="client-profile">
+                                        <div class="client-avatar">
+                                            <img src="assets/comment_2" alt="Farrel Gulierm" loading="lazy">
+                                            <div class="avatar-border"></div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p class="testimonial-text">"Very friendly and professional a fantastic job tidying up after previous poor attempts in cleaning, very timely and even did the arm on the sofa for free, not that I would encourage that I'm just cheeky."</p>
+                                        <div class="client-info">
+                                            <p class="client-name">Farrel Gulierm</p>
+                                            <p class="client-source">Facebook</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="testimonial-content">
-                                <p>"A fantastic, professional and reliable company. Great value for money and will be using this company again. My living room carpet was a mess and now looks like new."</p>
-                                <p class="author">Samuel Willson <span>Facebook</span></p>
+                
+                            
+                
+                            <!-- Testimonial 3 -->
+                            <div class="testimonial-card">
+                                <div class="testimonial-card-inner">
+                                    <div class="client-profile">
+                                        <div class="client-avatar">
+                                            <img src="assets/comment_1" alt="Sarah Lewin" loading="lazy">
+                                            <div class="avatar-border"></div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p class="testimonial-text">"Fabulous 5 star professional service : Friendly, polite and extremely thorough. Job well done! The sofas he cleaned came up like new!"</p>
+                                        <div class="client-info">
+                                            <p class="client-name">Sarah Lewin</p>
+                                            <p class="client-source">Facebook</p>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="testimonial">
-                            <div class="client-photo">
-                                <img src="assets/comment_1" alt="Sarah Lewin" loading="lazy">
-                            </div>
-                            <div class="testimonial-content">
-                                <p>"Fabulous 5 star professional service : Friendly, polite and extremely thorough. Job well done! The sofas he cleaned came up like new!"</p>
-                                <p class="author">Sarah Lewin <span>Facebook</span></p>
-                            </div>
-                        </div>
-                        <div class="testimonial">
-                            <div class="client-photo">
-                                <img src="assets/comment_3" alt="Lara Smoke" loading="lazy">
-                            </div>
-                            <div class="testimonial-content">
-                                <p>"Excellent service, had sofa 2 chairs and carpet cleaned, nice clean and fresh thank you Clean Carpet."</p>
-                                <p class="author">Lara Smoke" <span>Facebook</span></p>
+                
+                            <!-- Testimonial 4 -->
+                            <div class="testimonial-card">
+                                <div class="testimonial-card-inner">
+                                    <div class="client-profile">
+                                        <div class="client-avatar">
+                                            <img src="assets/comment_3" alt="Lara Smoke" loading="lazy">
+                                            <div class="avatar-border"></div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p class="testimonial-text">"Excellent service, had sofa 2 chairs and carpet cleaned, nice clean and fresh thank you Clean Carpet."</p>
+                                        <div class="client-info">
+                                            <p class="client-name">Lara Smoke</p>
+                                            <p class="client-source">Facebook</p>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
