@@ -4,7 +4,7 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-"build": "echo \"Building static files...\" && mkdir -p build && cp index.html build/ && cp -r styles script.js assets build/",
+    "build": "node build.mjs",
     "predeploy": "npm run build",
     "deploy": "npx gh-pages -d build",
     "start": "live-server --port=8080 --host=localhost --cors"
@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cpy": "^11.1.0",
+    "cpy-cli": "^5.0.0",
     "gh-pages": "^6.3.0"
   },
   "dependencies": {

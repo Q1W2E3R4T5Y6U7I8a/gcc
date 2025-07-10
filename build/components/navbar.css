@@ -1,0 +1,163 @@
+/* navbar.css */
+:root {
+    --secondary-color: #333333; /* Dark gray */
+    --accent-color: white; /* Light almost-white */
+    --golden-ratio: 1.618;
+  }
+  
+  .header {
+    background-color: black;
+    padding: calc(1rem / var(--golden-ratio)) 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 calc(0.5rem / var(--golden-ratio)) calc(1rem / var(--golden-ratio)) rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(0.5rem * var(--golden-ratio)) 0;
+  }
+  
+  .logo {
+    height: calc(3rem * var(--golden-ratio));
+    width: calc(3rem * var(--golden-ratio));
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: calc(1rem * var(--golden-ratio));
+    list-style: none;
+    margin: 0;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+  
+  .nav-menu li a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: calc(1rem / var(--golden-ratio));
+    letter-spacing: 0.05em;
+    font-size: 15px;
+    padding: calc(0.5rem / var(--golden-ratio)) calc(1rem / var(--golden-ratio));
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .nav-menu li a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+  }
+  
+  .nav-menu li a:hover {
+    color: #1691D9;
+  }
+  
+  .nav-menu li a:hover:before {
+    width: 100%;
+    left: 0;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-icons a {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons img {
+    width: 60%;
+    height: 60%;
+    transition: all 0.3s ease;
+    object-fit: contain;
+    filter: grayscale(100%) contrast(1.2) brightness(1.1);
+    opacity: 0.8;
+  }
+
+  .social-icons a:hover img {
+    filter: none;
+    opacity: 1;
+  }
+  
+  /* Mobile menu */
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+    
+    .nav-menu {
+      position: fixed;
+      top: 120px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 70px);
+      background-color: var(--secondary-color);
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 2rem;
+      gap: 2rem;
+      transition: left 0.3s ease;
+      z-index: 999;
+    }
+    
+    .nav-menu.active {
+      left: 0;
+
+    }
+    
+    .social-icons {
+      display: none;
+    }
+    
+    .menu-toggle.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    
+    .menu-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .menu-toggle.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
