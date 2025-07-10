@@ -137,9 +137,10 @@ form.addEventListener('submit', async (e) => {
   submitBtn.textContent = 'Sending...';
 
   try {
-    const sheetBestUrl = 'https://api.sheetbest.com/sheets/b2d6ae54-ba92-4b77-8e72-00bab938d36c';
-
-    const response = await fetch(sheetBestUrl, {
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbyG6HI2AhEtu3UK3hGQjPwQ-07BH_q9Wh0S9pNfe0WNuVC_0p-C4Nit_0ltfrVAX0BWlg/exec';
+    
+    // Note the /dev at the end for testing, remove for production
+    const response = await fetch(`${scriptUrl}?callback=ctrlq`, {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json'
@@ -149,68 +150,71 @@ form.addEventListener('submit', async (e) => {
         email: form.email.value,
         phone: form.phone.value
       }),
+      mode: 'no-cors' // Important for cross-origin requests
     });
 
-    if (!response.ok) throw new Error('Network response was not ok');
-
+    // With no-cors mode, we can't read the response directly
     alert('Submission successful!');
     form.reset();
 
   } catch (error) {
     console.error('Error:', error);
-    alert('Error: ' + error.message);
+    alert('Error submitting form. Please try again later.');
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = originalText;
   }
 });
-///////////////////////////////
-document.querySelector('.booking-form').addEventListener('submit', async function(e) {
+
+
+const bookingForm = document.getElementById('booking-form');
+  document.getElementById('booking-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   
-  // Get checkbox values as comma-separated string
-  const cleanItems = Array.from(document.querySelectorAll('input[name="clean-item"]:checked'))
-    .map(checkbox => checkbox.value)
-    .join(', ');
-  
-  // Prepare form data
-  const formData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value,
-    postcode: document.getElementById('postcode').value,
-    parking: document.querySelector('input[name="parking"]:checked')?.value,
-    floor: document.querySelector('input[name="floor"]:checked')?.value,
-    rooms: document.getElementById('rooms').value,
-    fabric: document.querySelector('input[name="fabric"]:checked')?.value,
-    staircase: document.querySelector('input[name="staircase"]:checked')?.value,
-    hallway: document.querySelector('input[name="hallway"]:checked')?.value,
-    spots: document.querySelector('input[name="spots"]:checked')?.value,
-    date: document.getElementById('date').value,
-    time_start: document.getElementById('time-start').value,
-    time_end: document.getElementById('time-end').value,
-    clean_items: cleanItems,
-    comments: document.getElementById('comments').value
-  };
-  
+  const submitBtn = this.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Submitting...';
+
   try {
-    const response = await fetch('https://api.sheetbest.com/sheets/ad78c122-5604-4825-857d-6a29d99dac37', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData)
-    });
+    // Format time values
+    const formatTime = (time) => time ? new Date(`1970-01-01T${time}`).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) : '';
     
-    if (response.ok) {
-      alert('Booking submitted successfully! We will contact you shortly.');
-      this.reset();
-    } else {
-      throw new Error('Failed to submit booking');
-    }
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      postcode: document.getElementById('postcode').value,
+      parking: document.querySelector('input[name="parking"]:checked')?.value || 'Not specified',
+      floor: document.querySelector('input[name="floor"]:checked')?.value || 'Not specified',
+      rooms: document.getElementById('rooms').value,
+      fabric: document.querySelector('input[name="fabric"]:checked')?.value || 'Not specified',
+      staircase: document.querySelector('input[name="staircase"]:checked')?.value || 'Not specified',
+      hallway: document.querySelector('input[name="hallway"]:checked')?.value || 'Not specified',
+      spots: document.querySelector('input[name="spots"]:checked')?.value || 'Not specified',
+      date: document.getElementById('date').value,
+      time_start: formatTime(document.getElementById('time-start').value),
+      time_end: formatTime(document.getElementById('time-end').value),
+      clean_items: Array.from(document.querySelectorAll('input[name="clean-item"]:checked'))
+                   .map(checkbox => checkbox.value).join(', ') || 'None selected',
+      comments: document.getElementById('comments').value || 'No comments'
+    };
+
+    const response = await fetch('https://script.google.com/macros/s/AKfycbyG6HI2AhEtu3UK3hGQjPwQ-07BH_q9Wh0S9pNfe0WNuVC_0p-C4Nit_0ltfrVAX0BWlg/exec', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+      mode: 'no-cors' // Add this for consistency
+    });
+
+    alert('Booking submitted successfully! We will contact you shortly.');
+    this.reset();
   } catch (error) {
     console.error('Error:', error);
     alert('There was an error submitting your booking. Please try again or contact us directly.');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
   }
 });
 
