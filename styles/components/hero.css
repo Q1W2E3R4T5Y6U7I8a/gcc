@@ -1,11 +1,14 @@
 .hero-section {
-    background-image: url('./assets/Go_Clean_Carpet_bc.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    align-items: center;
+  background-image: url('./assets/background_gcc.jpg');
+  background-repeat: no-repeat;
+ background-position: calc(50% - 270px) center;
+  background-size: contain; /* shows the whole image */
+  
+  display: flex;
+  align-items: flex-start; /* or center, if you like */
+  justify-content: center; /* optional, for horizontal alignment */
 }
+
 
 .care-info-section {
     padding-top: 50px;

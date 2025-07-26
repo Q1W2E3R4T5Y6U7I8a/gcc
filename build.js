@@ -1,12 +1,19 @@
-// build.js
 const fs = require('fs-extra');
+const sass = require('sass');
 
-console.log('Building static files...');
-
+// 1. Clean build dir
 fs.emptyDirSync('build');
-fs.copySync('index.html', 'build/index.html');
-fs.copySync('styles', 'build/styles');
-fs.copySync('script/index.js', 'build/index.js');
-fs.copySync('assets', 'build/assets');
 
-console.log('Build complete.');
+// 2. Copy ALL frontend files
+fs.copySync('index.html', 'build/index.html');
+fs.copySync('public', 'build/public');
+fs.copySync('script.js', 'build/script.js');
+fs.copySync('styles', 'build/styles');
+
+
+// 4. Copy API routes (if exists)
+if (fs.existsSync('pages/api')) {
+  fs.copySync('pages/api', 'build/pages/api');
+}
+
+console.log('✅ Build complete!');

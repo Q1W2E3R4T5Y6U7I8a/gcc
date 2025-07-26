@@ -4,7 +4,7 @@
   "main": "/script/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-   "build": "node build.js",
+    "build": "node build.js",
     "predeploy": "npm run build",
     "deploy": "npx gh-pages -d build",
     "start": "live-server --port=8081 --host=localhost --cors"
@@ -15,7 +15,8 @@
   "devDependencies": {
     "cpy": "^11.1.0",
     "cpy-cli": "^5.0.0",
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "sass": "^1.89.2"
   },
   "dependencies": {
     "array-union": "^2.1.0",
@@ -24,8 +25,10 @@
     "commander": "^13.1.0",
     "commondir": "^1.0.1",
     "dir-glob": "^3.0.1",
+    "dotenv": "^17.2.0",
     "email-addresses": "^5.0.0",
     "escape-string-regexp": "^1.0.5",
+    "express": "^5.1.0",
     "fast-glob": "^3.3.3",
     "fastq": "^1.19.1",
     "filename-reserved-regex": "^2.0.0",
@@ -60,6 +63,7 @@
     "semver": "^6.3.1",
     "slash": "^3.0.0",
     "strip-outer": "^1.0.1",
+    "stripe": "^18.3.0",
     "to-regex-range": "^5.0.1",
     "trim-repeated": "^1.0.0",
     "universalify": "^2.0.1"

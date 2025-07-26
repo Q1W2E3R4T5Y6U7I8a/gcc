@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Carpet Cleaning Services | London</title>
+    
+    <!-- Meta Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2291662587935858');
+        fbq('track', 'PageView');
+        </script>
+    <!-- End Meta Pixel Code -->
+    
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/components/payments.css">
     <link rel="stylesheet" href="./styles/layout.css">
@@ -24,20 +40,26 @@
     <link rel="stylesheet" href="./styles/components/team-section.css"> 
     <link rel="stylesheet" href="./styles/components/cleaning-process.css"> 
     <link rel="stylesheet" href="./styles/components/areas.css"> 
+    <link rel="stylesheet" href="./styles/components/fixed-contacts.css"> 
 
-    <script src="./script/index.js"></script>
+
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
-
-    <link rel="icon" href="./assets/favicon.jpg" type="image/jpg">
-</head>
+<!--  -->
+    <link rel="icon" href="./public/favicon.jpg" type="image/jpg">
+<!-- </head> -->
 <body>
+
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=2291662587935858&ev=PageView&noscript=1"/>
+    </noscript>
 
     <header class="header">
         <div class="container">
           <nav class="navbar">
-            <img src="./assets/emblem_go_cc" alt="Go Carpet Clean" class="logo">
+            <img src="./public/emblem_go_cc" alt="Go Carpet Clean" class="logo">
             
             <div class="menu-toggle">
               <div class="bar"></div>
@@ -45,28 +67,37 @@
               <div class="bar"></div>
             </div>
             
-            <ul class="nav-menu">
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="#booking">BOOKING</a></li>
-              <li><a href="#team">TEAM</a></li>
+<ul class="nav-menu">
+  <li><a href="#about">ABOUT</a></li>
+  <li><a href="#booking">BOOKING</a></li>
+  <li><a href="#team">TEAM</a></li>
+  <li><a href="#price">PRICE</a></li>
+  <li><a href="https://stripe-payment-omega.vercel.app/" id="depositLink">DEPOSIT</a></li>
+</ul>
 
-              <li><a href="#price">PRICE</a></li>
-            </ul>
-            
+<div class="fixed-contact">
+  <a href="tel:+447833517953" class="contact-btn phone-btn" aria-label="Call us">
+    <img src="./public/phone_icon.webp" alt="Phone icon" />
+  </a>
+  <a href="https://wa.me/447833517953" target="_blank" class="contact-btn wa-btn" aria-label="WhatsApp chat">
+    <img src="./public/wa_icon.png" alt="WhatsApp icon" />
+  </a>
+</div>
+
             <div class="social-icons">
                 <a href="https://wa.me/447833517953" target="_blank">
-                    <img src="./assets/wa_icon.png" alt="WhatsApp">
+                    <img src="./public/wa_icon.png" alt="WhatsApp">
                 </a>
-                <a href="https://www.instagram.com/gocarpetclean_uk?igsh=aTZ5dWJzMXE1cGd4&utm_source=qr"><img src="assets/instagram_icon.webp" alt="Instagram"></a>
-                <a href="http://www.tiktok.com/@gocarpetcleanuk"><img src="assets/tik_tok_icon.webp" alt="Tik-tok"></a>
+                <a href="https://www.instagram.com/gocarpetclean_uk?igsh=aTZ5dWJzMXE1cGd4&utm_source=qr"><img src="public/instagram_icon.webp" alt="Instagram"></a>
+                <a href="http://www.tiktok.com/@gocarpetcleanuk"><img src="public/tik_tok_icon.webp" alt="Tik-tok"></a>
             </div>
           </nav>
         </div>
       </header>
 
     <main> 
-        <section class="hero-section background_image" style="background-image: url('./assets/Go_Clean_Carpet_bc.jpg');">
-            <img src="./assets/Go_Clean_Carpet_bc_mobile2.jpg" class="mobile-hero-image" alt="Carpet Cleaning">
+        <section class="hero-section background_image" style="background-image: url('./public/background_gcc.png');">
+            <img src="./public/Go_Clean_Carpet_bc_mobile2.jpg" class="mobile-hero-image" alt="Carpet Cleaning">
             
             <div class="container">
                 <div class="hero-content">
@@ -76,14 +107,12 @@
                             <input type="email" name="email" placeholder="Your email" required> 
                             <input type="tel" name="phone" placeholder="Your number" required>
                             <button type="submit">SUBMIT</button>
+                            <h3>We will call you in 15 minutes!</h3>
                         </form>
                         <div class="stats">
-                            <p>Over <strong>570</strong> happy customers.</p>
                             <a href="https://api.whatsapp.com/send/?phone=447833517953&text&type=phone_number&app_absent=0" target="_blank" rel="noopener" style="display: inline-block; cursor: pointer;">
-                                <img src="./assets/wa_button.png" alt="WhatsApp Button" style="display: block; border: none;">
+                                <img src="./public/wa_button.png" alt="WhatsApp Button" style="display: block; border: none;">
                             </a>
-
-                            <p class="highlight">+ Get guaranteed gift</p>
                         </div>
                     </div>
                 </div>
@@ -93,8 +122,8 @@
         <section class="section active">
             <div class="container">
                 <div class="pricing-section" id="price">
-                    <div style="border: 2px solid black; background-color: red; padding: 20px 0; text-align: center; border-radius: 12px;">
-                        <h2 style="margin: 0; color: white;">Limited Time Special Offer</h2>
+                    <div style="border: 2px solid black; background-color: rgb(255, 255, 255); padding: 20px 0; text-align: center; border-radius: 12px;">
+                        <h2 style="margin: 0; color: rgb(255, 0, 0);">Limited Time Special Offer</h2>
                       </div>              
                     <p class="subtitle">Choose your best offer today.</p>
                     
@@ -130,6 +159,10 @@
                         </div>
                     </div>
                 </div>
+
+                                        <button class="cta-button"> <a href="#booking" style="text-decoration: none; color: inherit;">
+                            Book Your Cleaning Now
+                          </a></button>
                 
                 <section class="cleaning-process-section" id="about">
                     <div class="process-container">
@@ -166,10 +199,6 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <button class="cta-button"> <a href="#booking" style="text-decoration: none; color: inherit;">
-                            Book Your Cleaning Now
-                          </a></button>
                     </div>
                     
                     <div class="trust-container">
@@ -212,43 +241,65 @@
                     </div>
                 </section>
                 
-                <div class="before-after-section">
-                    <h2>Our Work Results</h2>
-                    <div class="comparison-grid">
-                        <!-- Comparison 1 -->
-                        <div class="comparison-box">
-                            <div class="before">
-                                <img src="/assets/before_1" alt="Before cleaning 1">
-                            </div>
-                            <div class="after">
-                                <img src="/assets/after_1" alt="After cleaning 1">
-                            </div>
-                            <div class="divider" draggable="true"></div>
-                        </div>
-                        
-                        <!-- Comparison 2 -->
-                        <div class="comparison-box">
-                            <div class="before">
-                                <img src="/assets/before_2" alt="Before cleaning 2">
-                            </div>
-                            <div class="after">
-                                <img src="/assets/after_2" alt="After cleaning 2">
-                            </div>
-                            <div class="divider" draggable="true"></div>
-                        </div>
-                        
-                        <!-- Comparison 3 -->
-                        <div class="comparison-box">
-                            <div class="before">
-                                <img src="/assets/before_3" alt="Before cleaning 3">
-                            </div>
-                            <div class="after">
-                                <img src="/assets/after_3" alt="After cleaning 3">
-                            </div>
-                            <div class="divider" draggable="true"></div>
-                        </div>
-                    </div>
-                </div>  
+ <div class="before-after-section">
+  <h2>Our Work Results</h2>
+  <div class="comparison-grid">
+    <!-- Comparison 1 -->
+    <div class="comparison-box">
+      <div class="before">
+        <img src="public/before_1.png" alt="Before cleaning 1">
+      </div>
+      <div class="after">
+        <img src="public/after_1.png" alt="After cleaning 1">
+      </div>
+      <div class="divider" draggable="true"></div>
+    </div>
+    
+    <!-- Comparison 2 -->
+    <div class="comparison-box">
+      <div class="before">
+        <img src="public/before_2.png" alt="Before cleaning 2">
+      </div>
+      <div class="after">
+        <img src="public/after_2.png" alt="After cleaning 2">
+      </div>
+      <div class="divider" draggable="true"></div>
+    </div>
+    
+    <!-- Comparison 3 -->
+    <div class="comparison-box">
+      <div class="before">
+        <img src="public/before_3.png" alt="Before cleaning 3">
+      </div>
+      <div class="after">
+        <img src="public/after_3.png" alt="After cleaning 3">
+      </div>
+      <div class="divider" draggable="true"></div>
+    </div>
+  </div>
+</div>
+<div style="max-width: 640px; margin: 0 auto;">
+  <style>
+    iframe {
+      width: 320px;
+      height: 180px;
+      display: block;
+      margin: 20px auto;
+    }
+    @media (min-width: 768px) {
+      iframe {
+        width: 640px;
+        height: 360px;
+      }
+    }
+  </style>
+
+  <iframe src="https://www.youtube.com/embed/UH9KXFW8qS4?autoplay=0&rel=0" frameborder="0" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/VcoBkl_3Imk?autoplay=0&rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
                 
                 <section class="care-info-section">
                     <h2>About our approach</h2>
@@ -271,6 +322,8 @@
                 </div>
                 </section>
 
+
+
                 <div class="team-section" id="team">
                     <div class="team-container">
                         <h2 class="team-heading">Our Dream Team</h2>
@@ -282,7 +335,7 @@
                                 <div class="member-card">
                                     <div class="member-photo-container">
                                         <div class="member-photo">
-                                            <img src="assets/zahar_icon" alt="Zahar Kovalchuk" loading="lazy">
+                                            <img src="public/zahar_icon" alt="Zahar Kovalchuk" loading="lazy">
                                             <div class="photo-overlay"></div>
                                         </div>
                                     </div>
@@ -300,7 +353,7 @@
                                 <div class="member-card">
                                     <div class="member-photo-container">
                                         <div class="member-photo">
-                                            <img src="assets/maks_icon" alt="Maksym Karashevskyi" loading="lazy">
+                                            <img src="public/maks_icon.jpg" alt="Maksym Karashevskyi" loading="lazy">
                                             <div class="photo-overlay"></div>
                                         </div>
                                     </div>
@@ -318,7 +371,7 @@
                                 <div class="member-card">
                                     <div class="member-photo-container">
                                         <div class="member-photo">
-                                            <img src="assets/bodia_icon" alt="Bogdan Karashevskyi" loading="lazy">
+                                            <img src="public/bodia_icon.jpg" alt="Bogdan Karashevskyi" loading="lazy">
                                             <div class="photo-overlay"></div>
                                         </div>
                                     </div>
@@ -333,14 +386,14 @@
                         </div>
                     </div>
                 </div>
-
+<!-- Testimonial 1 
                 <section id="areas" class="section areas-covered">
                     <div class="container">
                       <h2>We Cover the Oxfordshire and Berkshire Areas</h2>
-                      <img src="assets/areas_covered" alt="Areas Covered Map" class="areas-img" />
+                      <img src="public/areas_covered" alt="Areas Covered Map" class="areas-img" />
                     </div>
                 </section>
-                  
+                  -->
                 
                 <div class="testimonials-section">
                     <div class="testimonials-container">
@@ -351,7 +404,7 @@
                                 <div class="testimonial-card-inner">
                                     <div class="client-profile">
                                         <div class="client-avatar">
-                                            <img src="assets/comment_2" alt="Farrel Gulierm" loading="lazy">
+                                            <img src="public/comment_2" alt="Farrel Gulierm" loading="lazy">
                                             <div class="avatar-border"></div>
                                         </div>
                                     </div>
@@ -372,7 +425,7 @@
                                 <div class="testimonial-card-inner">
                                     <div class="client-profile">
                                         <div class="client-avatar">
-                                            <img src="assets/comment_1" alt="Sarah Lewin" loading="lazy">
+                                            <img src="public/comment_1" alt="Sarah Lewin" loading="lazy">
                                             <div class="avatar-border"></div>
                                         </div>
                                     </div>
@@ -392,7 +445,7 @@
                                 <div class="testimonial-card-inner">
                                     <div class="client-profile">
                                         <div class="client-avatar">
-                                            <img src="assets/comment_3" alt="Lara Smoke" loading="lazy">
+                                            <img src="public/comment_3" alt="Lara Smoke" loading="lazy">
                                             <div class="avatar-border"></div>
                                         </div>
                                         
@@ -545,7 +598,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3></h3>
-                    <img src="assets/emblem_go_cc" alt="">
+                    <img src="public/emblem_go_cc" alt="">
                     
                 </div>
                 
@@ -582,5 +635,6 @@
         </div>
     </footer>
 
+        <script src="./script.js"></script>
 </body>
 </html>
