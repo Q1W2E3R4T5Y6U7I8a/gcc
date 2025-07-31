@@ -1,0 +1,29 @@
+  .fixed-contact {
+    position: fixed;
+    top: 90%;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+  }
+  .contact-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px 0 0 25px;
+    cursor: pointer;
+  }
+  .phone-btn {
+    background-color: #007bff; /* blue */
+  }
+  .wa-btn {
+    background-color: #25D366; /* WhatsApp green */
+  }
+  .contact-btn img {
+    width: 24px;
+    height: 24px;
+  }
