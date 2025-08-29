@@ -1,0 +1,158 @@
+.before-after-section {
+    margin-top: 25px;
+    padding: 40px 10px;
+    background: var(--light-gray);
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  }
+  
+  .before-after-section h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+  
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .comparison-box {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    height: 300px;
+    margin: 20px auto;
+  }
+  
+  .comparison-box .before img,
+  .comparison-box .after img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .comparison-box .after {
+    clip-path: inset(0 50% 0 0); /* Start with half revealed */
+    transition: clip-path 0.1s ease-out;
+  }
+  
+  .comparison-box .divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #FFB300;
+    cursor: ew-resize;
+    left: 50%;
+    z-index: 10;
+  }
+  
+  
+  .before, .after {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .before img, .after img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  
+  .after {
+    width: 100%;
+    right: 0;
+  }
+  
+  .divider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: var(--accent-color);
+    cursor: ew-resize;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .divider::after {
+    content: '↔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary-color);
+    color: var(--accent-color);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .comparison-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 600px) {
+  .before-after-section {
+    margin-top: 15px;
+    padding: 20px 8px;
+  }
+
+  .before-after-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .comparison-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .comparison-box {
+    max-width: 100%;
+    height: 200px;
+    margin: 10px auto;
+  }
+
+  .comparison-box .before img,
+  .comparison-box .after img {
+    border-radius: 0.8rem;
+  }
+
+  .divider {
+    width: 3px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .divider::after {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+}

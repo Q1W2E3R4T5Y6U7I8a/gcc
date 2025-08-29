@@ -1,0 +1,99 @@
+.hero-section {
+  background-image: url('./assets/background_gcc.jpg');
+  background-repeat: no-repeat;
+ background-position: calc(50% - 270px) center;
+  background-size: contain; /* shows the whole image */
+  
+  display: flex;
+  align-items: flex-start; /* or center, if you like */
+  justify-content: center; /* optional, for horizontal alignment */
+}
+
+
+.care-info-section {
+    padding-top: 50px;
+}
+
+.mobile-hero-image {
+    display: none; /* Hidden by default (desktop) */
+}
+
+.hero-content {
+    display: flex;
+    justify-content: flex-end; /* Align form to right on desktop */
+    padding: 2rem;
+}
+
+.contact-box {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .hero-section {
+        background-image: none !important;/* Remove background image on mobile */
+        min-height: auto;
+        display: block;
+    }
+    
+    .mobile-hero-image {
+        display: block; /* Show mobile image */
+        width: 100%;
+        height: auto;
+    }
+    
+    .hero-content {
+        justify-content: center; /* Center form on mobile */
+        padding: 1rem;
+    }
+    
+    .contact-box {
+        margin: 0 auto; /* Center the form box */
+        margin-top: 1rem; /* Add space between image and form */
+    }
+}
+
+/* Form styles (same for both) */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.2);
+}
+
+.stats {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.stats .highlight {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-yellow);
+    transition: color 0.3s ease;
+}
